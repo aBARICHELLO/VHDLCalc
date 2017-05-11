@@ -1,0 +1,63 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alunos/Desktop/1208B/AULA3/VHDLCalc
+Etopo
+Z1 w1494523387
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 F4?8H@AVP;^e9M1j^UT:m0
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 [oXPE7T5CiffkAjNK>1^_0
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 h=WEPgg^KP4dRbKHbJLS:0
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 UnfbeWGEe]KW7:DTn;?VS1
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 ]KYk:P<?aKG^=ZNSeb8Pf3
+R0
+Z11 8/home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho
+Z12 F/home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho
+l0
+L39
+V3@Jc?@n21TiGLQgCI5@7d2
+!s100 ;D>OoYb0g>VH2zW<Pk^@53
+Z13 OV;C;10.3d;59
+32
+Z14 !s110 1494523487
+!i10b 1
+Z15 !s108 1494523487.705276
+Z16 !s90 -reportprogress|300|-work|work|/home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho|
+Z17 !s107 /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 4 topo 0 22 3@Jc?@n21TiGLQgCI5@7d2
+l99
+L63
+V=QcJc05SiWGV;o7R6fz6J3
+!s100 Ie:i?cRaM48QfeSHS^?nY3
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
