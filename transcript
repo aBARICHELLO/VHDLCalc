@@ -39,3 +39,5 @@ vsim work.topo
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 add wave  \
 sim:/topo/KEY(1)
+# End time: 14:41:46 on May 11,2017, Elapsed time: 0:16:55
+# Errors: 0, Warnings: 0
