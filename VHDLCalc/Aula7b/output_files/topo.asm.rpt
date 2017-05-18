@@ -1,5 +1,5 @@
 Assembler report for topo
-Thu May 11 14:37:34 2017
+Thu May 18 14:33:57 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 11 14:37:34 2017 ;
+; Assembler Status      ; Successful - Thu May 18 14:33:57 2017 ;
 ; Revision Name         ; topo                                  ;
 ; Top-level Entity Name ; topo                                  ;
 ; Family                ; Cyclone V                             ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting           ;
 +----------------+-------------------+
 ; Device         ; 5CSEMA5F31C6      ;
-; JTAG usercode  ; 0x00AF80A7        ;
-; Checksum       ; 0x00AF80A7        ;
+; JTAG usercode  ; 0x00AFDA67        ;
+; Checksum       ; 0x00AFDA67        ;
 +----------------+-------------------+
 
 
@@ -79,13 +79,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu May 11 14:37:20 2017
+    Info: Processing started: Thu May 18 14:33:43 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off topo -c topo
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 978 megabytes
-    Info: Processing ended: Thu May 11 14:37:34 2017
+    Info: Peak virtual memory: 981 megabytes
+    Info: Processing ended: Thu May 18 14:33:57 2017
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:14
 
 

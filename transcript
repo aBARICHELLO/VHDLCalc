@@ -1,8 +1,7 @@
-vlib work
-vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho
+vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 14:24:47 on May 11,2017
-# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7a/simulation/modelsim/topo.vho 
+# Start time: 14:22:21 on May 18,2017
+# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -15,11 +14,11 @@ vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VH
 # -- Loading package cyclonev_components
 # -- Compiling entity topo
 # -- Compiling architecture structure of topo
-# End time: 14:24:48 on May 11,2017, Elapsed time: 0:00:01
+# End time: 14:22:21 on May 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.topo
 # vsim 
-# Start time: 14:24:51 on May 11,2017
+# Start time: 14:22:25 on May 18,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -38,6 +37,120 @@ vsim work.topo
 # Loading altera.dffeas(vital_dffeas)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 add wave  \
-sim:/topo/KEY(1)
-# End time: 14:41:46 on May 11,2017, Elapsed time: 0:16:55
+sim:/topo/KEY
+add wave  \
+sim:/topo/LEDR
+add wave  \
+sim:/topo/HEX0
+force -freeze sim:/topo/KEY 00 0
+run
+run
+run
+run
+add wave  \
+sim:/topo/\\L0|contagem\\
+run
+force -freeze sim:/topo/\\L0|contagem\\ 0000 0
+run
+run
+run
+restart -f
+vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:30:03 on May 18,2017
+# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity topo
+# -- Compiling architecture structure of topo
+# End time: 14:30:03 on May 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:30:05 on May 18,2017
+# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity topo
+# -- Compiling architecture structure of topo
+# End time: 14:30:05 on May 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart -f
+# ** Error: (vsim-3170) Could not find '/home/alunos/Desktop/1208B/AULA3/VHDLCalc/work.topo'.
+vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 14:35:50 on May 18,2017
+# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Aula7b/simulation/modelsim/topo.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity topo
+# -- Compiling architecture structure of topo
+# End time: 14:35:50 on May 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.topo
+# Error loading design
+vsim work.topo
+# vsim 
+# Start time: 14:36:06 on May 18,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.topo(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 16483 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+force -freeze sim:/topo/KEY 00 0
+run
+add wave  \
+sim:/topo/CLOCK_50
+run
+force -freeze sim:/topo/CLOCK_50 1 0
+run
+run
+force -freeze sim:/topo/CLOCK_50 1 0, 0 {25 ps} -r 50
+run
+run
+run
+run
+force -freeze sim:/topo/KEY 01 0
+run
+run
+force -freeze sim:/topo/KEY 11 0
+run
+run
