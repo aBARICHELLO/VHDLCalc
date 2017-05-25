@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity FSM_Control is
+port( 
+	clock_50,reset,Enter: in std_logic;
+	Operation			  : in stD_logic_vector(2 downto 0);
+	Selection 			  : out std_logic_vector(1 downto 0);
+	Enable_1,Enable_2	  : out std_logic
+);
+end FSM_Control;
+
+architecture bhv of FSM_Control is
+type STATES is (S0,S1,S2,S3,S4,S5,S6,S7);
+signal CS,NS: STATES; --current and next states
+signal clock: std_logic;
+signal reset: std_logic;
+
+begin
+clock <= clock_50;
+reset <= reset;
+
+P1: process(clock, reset)
+begin
+	if reset = '0' then
+		CS <= S0;
+	elsif clock_50'event and clock_50 = '0' then
+		CS <= NS;
+	end if;
+end process;
+
+P2: process()
+
+P3: process()
+end;
