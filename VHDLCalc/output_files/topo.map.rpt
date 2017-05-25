@@ -1,5 +1,5 @@
 Analysis & Synthesis report for topo
-Thu May 25 14:21:11 2017
+Thu May 25 14:41:09 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -10,7 +10,14 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +41,27 @@ agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                             ;
-+-----------------------------+--------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu May 25 14:21:11 2017          ;
-; Quartus II 64-Bit Version   ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name               ; topo                                       ;
-; Top-level Entity Name       ; topo                                       ;
-; Family                      ; Cyclone V                                  ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                  ;
-; Total registers             ; N/A until Partition Merge                  ;
-; Total pins                  ; N/A until Partition Merge                  ;
-; Total virtual pins          ; N/A until Partition Merge                  ;
-; Total block memory bits     ; N/A until Partition Merge                  ;
-; Total PLLs                  ; N/A until Partition Merge                  ;
-; Total DLLs                  ; N/A until Partition Merge                  ;
-+-----------------------------+--------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu May 25 14:41:09 2017      ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                   ; topo                                       ;
+; Top-level Entity Name           ; topo                                       ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 8                                          ;
+; Total pins                      ; 30                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -151,13 +163,126 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; topo.vhd                         ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/topo.vhd       ;         ;
+; C1.vhd                           ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/C1.vhd         ;         ;
+; C2.vhd                           ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/C2.vhd         ;         ;
+; C3.vhd                           ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/C3.vhd         ;         ;
+; Decod7seg.vhd                    ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/Decod7seg.vhd  ;         ;
+; C4.vhd                           ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/C4.vhd         ;         ;
+; mux4x1.vhd                       ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/mux4x1.vhd     ;         ;
+; FF_D_4bits.vhd                   ; yes             ; User VHDL File  ; /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/FF_D_4bits.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 9              ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 15             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 0              ;
+;     -- 5 input functions                    ; 4              ;
+;     -- 4 input functions                    ; 7              ;
+;     -- <=3 input functions                  ; 4              ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 8              ;
+;                                             ;                ;
+; I/O pins                                    ; 30             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 8              ;
+; Total fan-out                               ; 132            ;
+; Average fan-out                             ; 1.59           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |topo                      ; 15 (0)            ; 8 (0)        ; 0                 ; 0          ; 30   ; 0            ; |topo               ; work         ;
+;    |C1:L1|                 ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|C1:L1         ; work         ;
+;    |Decod7seg:L8|          ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|Decod7seg:L8  ; work         ;
+;    |FF_D_4bits:L6|         ; 0 (0)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|FF_D_4bits:L6 ; work         ;
+;    |FF_D_4bits:L7|         ; 0 (0)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |topo|FF_D_4bits:L7 ; work         ;
+;    |mux4x1:L5|             ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |topo|mux4x1:L5     ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 8     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |topo|mux4x1:L5|m[1]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 8                           ;
+;     ENA CLR           ; 8                           ;
+; arriav_lcell_comb     ; 17                          ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
+;     normal            ; 13                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 4                           ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.30                        ;
+; Average LUT depth     ; 1.50                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu May 25 14:20:55 2017
+    Info: Processing started: Thu May 25 14:40:52 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off topo -c topo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file topo.vhd
@@ -187,11 +312,58 @@ Info (12021): Found 2 design units, including 1 entities, in source file FF_D_4b
 Info (12021): Found 2 design units, including 1 entities, in source file FSM_Control.vhd
     Info (12022): Found design unit 1: FSM_Control-bhv
     Info (12023): Found entity 1: FSM_Control
-Error (10465): VHDL error at FSM_Control.vhd(18): name "reset" cannot be used because it is already used for a previously declared item File: /home/alunos/Desktop/1208B/AULA3/VHDLCalc/VHDLCalc/FSM_Control.vhd Line: 18
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 1052 megabytes
-    Error: Processing ended: Thu May 25 14:21:11 2017
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:38
+Info (12127): Elaborating entity "topo" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..4]" at topo.vhd(8)
+Info (12128): Elaborating entity "C1" for hierarchy "C1:L1"
+Info (12128): Elaborating entity "C2" for hierarchy "C2:L2"
+Info (12128): Elaborating entity "C3" for hierarchy "C3:L3"
+Info (12128): Elaborating entity "C4" for hierarchy "C4:L4"
+Info (12128): Elaborating entity "mux4x1" for hierarchy "mux4x1:L5"
+Info (12128): Elaborating entity "FF_D_4bits" for hierarchy "FF_D_4bits:L6"
+Info (12128): Elaborating entity "Decod7seg" for hierarchy "Decod7seg:L8"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 23 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 1065 megabytes
+    Info: Processing ended: Thu May 25 14:41:09 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

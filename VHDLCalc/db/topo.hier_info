@@ -29,29 +29,29 @@ SW[7] => C2:L2.B[3]
 SW[7] => C3:L3.B[3]
 SW[8] => mux4x1:L5.s[0]
 SW[9] => mux4x1:L5.s[1]
-HEX0[0] <= Decod7Seg:L8.F[0]
-HEX0[1] <= Decod7Seg:L8.F[1]
-HEX0[2] <= Decod7Seg:L8.F[2]
-HEX0[3] <= Decod7Seg:L8.F[3]
-HEX0[4] <= Decod7Seg:L8.F[4]
-HEX0[5] <= Decod7Seg:L8.F[5]
-HEX0[6] <= Decod7Seg:L8.F[6]
+HEX0[0] << Decod7Seg:L8.F[0]
+HEX0[1] << Decod7Seg:L8.F[1]
+HEX0[2] << Decod7Seg:L8.F[2]
+HEX0[3] << Decod7Seg:L8.F[3]
+HEX0[4] << Decod7Seg:L8.F[4]
+HEX0[5] << Decod7Seg:L8.F[5]
+HEX0[6] << Decod7Seg:L8.F[6]
 KEY[0] => FF_D_4bits:L6.RST
 KEY[0] => FF_D_4bits:L7.RST
 KEY[1] => FF_D_4bits:L6.EN
 KEY[1] => FF_D_4bits:L7.EN
 CLOCK_50 => FF_D_4bits:L6.CLK
 CLOCK_50 => FF_D_4bits:L7.CLK
-LEDR[0] <= FF_D_4bits:L7.Q[0]
-LEDR[1] <= FF_D_4bits:L7.Q[1]
-LEDR[2] <= FF_D_4bits:L7.Q[2]
-LEDR[3] <= FF_D_4bits:L7.Q[3]
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
+LEDR[0] << FF_D_4bits:L7.Q[0]
+LEDR[1] << FF_D_4bits:L7.Q[1]
+LEDR[2] << FF_D_4bits:L7.Q[2]
+LEDR[3] << FF_D_4bits:L7.Q[3]
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
 
 
 |topo|C1:L1
