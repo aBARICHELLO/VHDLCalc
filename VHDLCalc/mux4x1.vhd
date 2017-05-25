@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity mux4x1 is
-port( w,x,y,z: in std_logic_vector(3 downto 0);
+port( w,x,y,z: in std_logic_vector(7 downto 0);
 		s: in std_logic_vector(1 downto 0);
-		m: out std_logic_vector(3 downto 0)
+		m: out std_logic_vector(7 downto 0)
 		);
 end mux4x1;
 
