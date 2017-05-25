@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity FSM_Control is
 port( 
 	clock_50,reset,Enter: in std_logic;
-	Operation			  : in stD_logic_vector(2 downto 0);
+	Operation			  : in stD_logic_vector(9 downto 8);
 	Selection 			  : out std_logic_vector(1 downto 0);
 	Enable_1,Enable_2	  : out std_logic
 );
@@ -52,16 +52,12 @@ begin
 				case Operation is
 					when "00" => 
 						NS <= S3;
-						
 					when "01" => 
 						NS <= S4;
-						
 					when "10" =>
 						NS <= S5;
-						
 					when "11" => 
 						NS <= S6;
-						
 				end case;
 			
 			when S3 =>
@@ -86,15 +82,13 @@ begin
 				end if;
 				
 			when S6 =>
-			
-			
+				NS <= S0;
 			when S7 =>
 				if Enter = '1' then
-					NS <= S7;
-				else
 					NS <= S0;
+				else
+					NS <= S7;
 				end if;
-			
 		end case;
 	end process;
 	

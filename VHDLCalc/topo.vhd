@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity topo is
 port(SW: IN STD_LOGIC_VECTOR(9 downto 0);
-	HEX0: out std_logic_vector(6 downto 0);
+	HEX0,HEX1: out std_logic_vector(6 downto 0);
 	KEY: in std_logic_vector(1 downto 0);
 	CLOCK_50: in std_logic;
 	LEDR: OUT STD_LOGIC_VECTOR(9 downto 0)
@@ -11,7 +11,7 @@ end topo;
 
 architecture topo_estru of topo is
 	signal F,F1,F2,F3,F4: std_logic_vector(7 downto 0);
-	signal g: std_logic_vector(3 downto 0);
+	signal g,g1: std_logic_vector(3 downto 0);
 	signal Fsm_to_mux: std_logic_vector(1 downto 0);
 	signal enable1,enable2: std_logic;
 	signal out8bits: std_logic_vector(7 downto 0);
@@ -91,15 +91,16 @@ end component;
 
 begin
 --fix numbers.
-L0: FSM_Control port map (CLOCK_50, KEY(0), KEY(1), SW(9 downto 8), fsm_to_mux, enable1, enable2);
-L1: FF_D_8bits port map (CLOCK_50, KEY(0), enable1, SW(7 downto 0), out8bits); --New register.
-L2: C1 port map (out8bits, SW(7 downto 0), F1);
-L3: C2 port map (out8bits, SW(7 downto 0), F2);
-L4: C3 port map (out8bits, SW(7 downto 0), F3);
-L5: C4 port map (SW(7 downto 0),F4);
-L6: mux4x1 port map (F1,F2,F3,F4, Fsm_to_mux, F); 
-L7: FF_D_4bits port map(CLOCK_50, KEY(0), enable2, F(7 downto 4), G); 
-L8: FF_D_4bits port map(CLOCK_50,KEY(0),KEY(1),F,LEDR(3 downto 0));
-L9: Decod7Seg port map (G,HEX0);
+L0:  FSM_Control port map (CLOCK_50, KEY(0), KEY(1), SW(9 downto 8), fsm_to_mux, enable1, enable2);
+L1:  FF_D_8bits port map (CLOCK_50, KEY(0), enable1, SW(7 downto 0), out8bits); --New register.
+L2:  C1  port map (out8bits, SW(7 downto 0), F1);
+L3:  C2 port map (out8bits, SW(7 downto 0), F2);
+L4:  C3 port map (out8bits, SW(7 downto 0), F3);
+L5:  C4 port map (SW(7 downto 0),F4);
+L6:  mux4x1 port map (F1,F2,F3,F4, Fsm_to_mux, F); 
+L7:  FF_D_4bits port map(CLOCK_50, KEY(0), enable2, F(7 downto 4), g); 
+L8:  FF_D_4bits port map(CLOCK_50, KEY(0), enable2, F(3 downto 0), g1);
+L9:  Decod7Seg port map (G,HEX1);
+L10: Decod7Seg port map (G1,HEX0);
 
 end topo_estru; --t
