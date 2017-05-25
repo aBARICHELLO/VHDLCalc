@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity C1 is
-port( A: in std_logic_vector(3 downto 0);
-		B: in std_logic_vector(3 downto 0);
-		F: out std_logic_vector(3 downto 0)
+port( A: in std_logic_vector(7 downto 0);
+		B: in std_logic_vector(7 downto 0);
+		F: out std_logic_vector(7 downto 0)
 		);
 end C1;
 

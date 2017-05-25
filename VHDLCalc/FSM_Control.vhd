@@ -21,7 +21,7 @@ begin
 	clock <= clock_50;
 	rst <= reset;
 
-	--FSM with 2 processes.
+	--FSM with 3 processes.
 	P1: process(clock, reset) --clock
 	begin
 		if reset = '0' then
@@ -125,4 +125,4 @@ begin
 				Enable_2 <= '1';
 		end case;
 	end process;
-end;
+end bhv;
