@@ -75,11 +75,7 @@ begin
 				end if;
 				
 			when S5 =>
-				if Enter = '1' then
-					NS <= S5;
-				else
-					NS <= S7;
-				end if;
+				NS <= S5;
 				
 			when S6 =>
 				NS <= S0;
@@ -110,6 +106,8 @@ begin
 				Selection <= "01";
 			when S5 =>
 				Selection <= "10";
+				Enable_1 <= '0';
+				Enable_2 <= '1';
 			when S6 =>
 				Enable_1 <= '0';
 				Enable_2 <= '1';

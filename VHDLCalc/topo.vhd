@@ -1,7 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 entity topo is
-port(SW: IN STD_LOGIC_VECTOR(9 downto 0);
+port(
+	SW: IN STD_LOGIC_VECTOR(9 downto 0);
 	HEX0,HEX1: out std_logic_vector(6 downto 0);
 	KEY: in std_logic_vector(1 downto 0);
 	CLOCK_50: in std_logic;
@@ -51,18 +52,20 @@ port(
 end component;
 
 component C3 
-port(
-	A: in std_logic_vector(7 downto 0);
-	B: in std_logic_vector(7 downto 0);
-	F: out std_logic_vector(7 downto 0)
+generic (N : natural := 8);
+port( 
+	A: in std_logic_vector((N-1) downto 0);
+	Clock_50,RST: in std_logic;
+	F: out std_logic_vector((N-1) downto 0)
 );
 end component;
 
 component C4
-
-port(
-	A: in std_logic_vector(7 downto 0);
-	F: out std_logic_vector(7 downto 0)
+generic (N : natural := 8);
+port( 
+	A: in std_logic_vector((N-1) downto 0);
+	Clock_50,RST: in std_logic;
+	F: out std_logic_vector((N-1) downto 0)
 );
 end component;
 
@@ -95,8 +98,8 @@ L0:  FSM_Control port map (CLOCK_50, KEY(0), KEY(1), SW(9 downto 8), fsm_to_mux,
 L1:  FF_D_8bits port map (CLOCK_50, KEY(0), enable1, SW(7 downto 0), out8bits); --New register.
 L2:  C1  port map (out8bits, SW(7 downto 0), F1);
 L3:  C2 port map (out8bits, SW(7 downto 0), F2);
-L4:  C3 port map (out8bits, SW(7 downto 0), F3);
-L5:  C4 port map (SW(7 downto 0),F4);
+L4:  C3 port map (SW(7 downto 0), CLOCK_50, KEY(0), F3); -- x2
+L5:  C4 port map (SW(7 downto 0), CLOCK_50, KEY(0), F4); -- /2
 L6:  mux4x1 port map (F1,F2,F3,F4, Fsm_to_mux, F); 
 L7:  FF_D_4bits port map(CLOCK_50, KEY(0), enable2, F(7 downto 4), g); 
 L8:  FF_D_4bits port map(CLOCK_50, KEY(0), enable2, F(3 downto 0), g1);
